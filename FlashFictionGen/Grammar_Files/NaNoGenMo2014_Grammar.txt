@@ -1,0 +1,151 @@
+# Something, Somewhere, copyright (c) 2014 Ben Kybartas <b.a.kybartas@tudelft.nl>
+#
+# Permission to use, copy, modify, and/or distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+# SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+# IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+#
+# 29 November 2014
+
+#Story Structure
+#----------------
+
+#Main Main
+main:#story#
+
+#Story Piece
+story:#story_location#
+story_conclusion:~
+
+#Location
+story_location:#location_desc#. #story_action#;#location_desc#. #story_happening#;#location_desc#. #story_description#
+location_desc:#inside_building#, #road#;#road#, #inside_building#;#building#, #building#, #inside_building#;#building#, #road#, #inside_building#;#inside_building#, #building#
+
+#Action
+story_action:#action_desc#. #story_happening#;#action_desc#. #story_conclusion#
+action_desc:A #person# #static_action#;The #person# and #a_the# #person_complex# #meeting_person# #meeting_time#
+
+#Happening
+story_happening:#happening_desc#. #story_discussion#;#happening_desc#. #story_action#
+happening_desc:The sound of #sound_sudden# #sound_style#;The #weather# #weather_effect#;A #animal# #animal_action#
+
+#Discussion
+story_discussion:#discussion_desc#. #story_discussion#;#discussion_desc#. #story_happening#;#discussion_desc#. #story_conclusion#
+discussion_desc:``#discussion_content#'' the #person# #discussion_type#
+
+#Description
+story_description:#description_desc#. #story_action#;#description_desc#. #story_happening#;#description_desc#. #story_discussion#
+description_desc:The #room_part# #room_desc#
+
+#General
+#----------------
+
+#Colour
+colour:#natural_colour#;#unnatural_colour#
+natural_colour:brown;grey;charcoal;black;light grey
+unnatural_colour:pink;blue;yellow;green;crimson;cyan;brown;red;purple;acid green
+
+#People Description
+gender:he;she;they
+he_she:he;she
+gender_owner:his;her;their
+gender_them:him;her;them;a #person_status# #person_type#
+person:man;woman;#person_status# #person_type#
+person_complex:#person_status# #person_type#;#person_type#
+person_simple:man;woman;individual
+person_status:shrouded;faceless;bruised;fearful;veiled;bloodied;lost;withered;aged
+person_type:figure;wanderer;model;prostitute;individual;man;woman;vagrant;traveller
+animal:rat;dog;mouse;raccoon;cat;stray cat;stray dog
+body_part:lips;hands;fingers;hips;bodies
+
+#Adjectives
+description:cracking;twisting;rusted;crumbling;dusty;grimy;stained;moldy;filthy;abandoned;gleaming;shining;glowing;imposing;sleek
+height:nearly infinite;towering;short
+width:narrow;slim;wide;thick;spindly
+style:modern;glass;brick;stone;steel;plastic;simple;expensive;crystal;neon
+road_style:tar;dirt;gravel
+shape:spider-web;grid
+glass_desc:cracked;frosted;spotless;stained;filthy;greasy;smudgy;clear;cloudy
+metal_description:rusted;dusty;grimy;stained;shined;polished;imposing;sleek
+
+#Objects
+trash:stained magazine;crumpled newspaper;broken tv remote;torn up letter;sheet of plastic;old chicken bone;tin can;tattered shoe;piece of wire;length of rope;shard of glass;rotten apple
+coverings:advertisements;missing pet posters;#colour# grafitti;strange messages;threats;letters;#natural_colour# book pages;#colour# paintings;#colour# drawings;mirrors;ants;cockroaches;#width# #colour# pipes;spiderwebs;dust
+road_type:road;street;freeway;path;sidewalk;subway line;railroad tracks;river;alleyway
+building_type_plural:apartments;houses;offices;skyscrapers;malls;warehouses;factories;smokestacks
+building_type_singular:office building;factory;warehouse;church;apartment complex;art studio;fast food restaurant;hospital;subway stop;train station;barracks;temple;night club;restaurant;theater;stairway
+glass:mirror;window;wine glass;beer glass;shot glass;pair of glasses;wristwatch;cellphone;locket;light-bulb;neon sign
+smell:mold;mildew;salt;alcohol
+
+#Weather
+weather:fog;rain;snow;sleet;downpour;snowstorm;rainstorm
+weather_effect:obscures the #person#'s vision;fills the air;becomes heavier;clears slightly;shows no sign of clearing
+
+#Lighting
+lighting:dimly lit;strangely lit;neon lit;brightly lit;#colour# lit;barely lit;glaringly lit;unlit
+
+#Audio
+sound_loudness:shrill;piercing;muffled;clear;lonely;violent
+sound_change:louder and louder;quieter and quieter;louder;quieter
+sound_sudden:a #sound_loudness# heartbeat;shattering glass;a #sound_loudness# scream;a #sound_loudness# car alarm;#sound_loudness# laughter
+sound_style:echoes continuously;is cut off violently;resonates;gets #sound_change#
+
+#Actions
+static_action:#look# #look_to_location# #hole#;#look# #emotional# #look_to_location# #hole#;#look# #look_from_location# #area#;#look# #emotional# #look_from_location# #area#;#look# into a #glass_desc# #glass#;#look# #emotional# into a #glass_desc# #glass#
+look:gazes;peers;stares;peeks
+motion_person:runs;walks;sprints;crawls;is pursued;is followed
+meeting_person:talk;meet stares;cross gazes;#body_part#' touch;argue #angry_emotional#;talk #any_emotional#;#body_part#' part;#body_part#' meet
+animal_action:watches #neutral_emotional#;picks up #a_the# #trash# in their mouth and #animal_move_action#;#animal_move_action#;picks up a #trash# in #gender_owner# mouth
+animal_move_action:runs away;runs away #emotional#;darts into #area#
+
+#Time
+meeting_time:for the first time;again;at last;as predicted;once more;with renewed vigour
+
+#Locations
+area:a darkened corner;the shadows
+hole:a drilled hole;the cracks in a wall;the door of a closet
+
+#Adverbs
+any_emotional:#emotional#;#angry_emotional#
+emotional:nervously;hesitantly;cautiously;slowly;cooly;coldly;morbidly;resignedly;desperately
+angry_emotional:angrily;viciously;coldly;aggressively;passive-aggressively;passionately;with disgust
+neutral_emotional:curiously;interestedly;cooly;with interest;unemotionally
+
+#And
+and:and;and also;yet;but;although
+a_the:a;the
+descript:#description#;#description# and #description#;#natural_colour# #description#
+the_plural:the;the many;the nearly infinite;the few;the sparse;the overwhelming number of;the endless
+
+#Position
+location:amongst #a_the#;in between #a_the#;throughout #a_the#;around #a_the#;near #a_the#;far from #a_the#;close to #a_the#;away from #a_the#;miles from #a_the#
+location_plural:amongst #the_plural#;in between #the_plural#;throughout #the_plural#;around #the_plural#;near #the_plural#;far from #the_plural#;close to #the_plural#;away from #the_plural#;miles from #the_plural#
+direction:towards;at;along;
+road_location:down #a_the#;somewhere along #a_the#;several kilometers down #a_the#
+in_location:within #a_the#;inside #a_the#;within the walls of #a_the#;among the halls of #a_the#;just outside #a_the#;in the entrance of #a_the#
+look_to_location:into;at;through
+look_from_location:from;from within;from inside
+
+#Discussion
+discussion_type:says;mutters;remarks;replies;thinks;whispers;ponders aloud;ponders silently;wonders;asks;asks #any_emotional#
+discussion_content:Remember when #when_what#?;Do you think #think_what#?;Why are you #why_what#?
+when_what:we first met;we made love;you loved me;we visited here first;#gender# was still alive;#gender# still loved me;we felt something
+think_what:#gender# saw us;there's something out there;it has a purpose;there's a reason;there could ever be a reason;they are coming;#he_she# is coming;something's coming;they are out there;#he_she# is out there
+why_what:#person_status#
+
+#City
+road:#road_location# #descript# #road_type#;#road_location# #road_type#
+inside_building:#in_location# #lighting# #building_type_singular#;#in_location# #descript# #building_type_singular#
+building:#location_plural# #height# #style# #building_type_plural#;#location_plural# #style# #building_type_plural#;#location_plural# #descript# #building_type_plural#
+
+#Room Description
+room_part:floors;#description# floors;walls;#description# walls;rooms;#description# rooms
+room_desc:smell of #smell#;are #cover_type# #coverings#
+cover_type:covered in;sparsely covered in;thickly coated in;overrun with
